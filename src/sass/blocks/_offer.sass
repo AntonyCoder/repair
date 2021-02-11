@@ -19,6 +19,7 @@
     max-width: 360px
     line-height: 35px
     margin-bottom: 24px
+    text-align: left
   &__subtitle
     max-width: 250px
     margin-bottom: 30px
@@ -30,6 +31,21 @@
   &__button
     width: 100%
     min-height: 70px
+    margin-bottom: 32px
+    +bold
+  &-description
+    display: flex
+    justify-content: space-between
+    align-items: center
+    line-height: 24px
+    font-size: 15px
+    &__item
+      width: 40%
+  &__phone
+    text-decoration: none
+    color: $text-color
+    +bold
+
 @media (max-width: 1200px)
   .offer
     background-size: cover
@@ -38,9 +54,16 @@
       margin-bottom: 10px
     &__button
       font-size: 13px
+    &-description
+      flex-direction: column
+      &__item
+        width: 100%
+        margin-bottom: 18px
 @media (max-width: 768px)
   .offer
     background: #ffffff
     &-block
       width: 100%
       padding-right: 0
+    &-description
+      width: 230px

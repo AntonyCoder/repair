@@ -21,30 +21,13 @@
 }
 
 body {
+  color: #333333;
   font-family: 'Museo Sans Light', sans-serif;
   font-weight: 300;
 }
 
 img {
   max-width: 100%;
-}
-
-.container {
-  width: 1170px;
-  margin: auto;
-}
-
-@media (max-width: 1200px) {
-  .container {
-    width: 760px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 580px;
-    width: 95%;
-  }
 }
 
 .button {
@@ -67,6 +50,8 @@ img {
   font-size: 24px;
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
+  text-align: center;
+  max-width: 500px;
 }
 
 .section-subtitle {
@@ -79,6 +64,38 @@ img {
   padding: 23px 26px;
   font-size: 15px;
   border-radius: 10px;
+}
+
+.arrows__right:hover, .arrows__left:hover {
+  cursor: pointer;
+}
+
+.container {
+  width: 1170px;
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 760px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 580px;
+    width: 87%;
+  }
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .section-title {
+    font-size: 18px;
+  }
+  .section-subtitle {
+    font-size: 14px;
+  }
 }
 
 /* Импорт стилей шапки*/
@@ -248,6 +265,7 @@ img {
   }
   .hero-list__text {
     font-size: 12px;
+    max-width: 200px;
   }
   .hero-list__item {
     margin-bottom: 20px;
@@ -285,6 +303,7 @@ img {
   max-width: 360px;
   line-height: 35px;
   margin-bottom: 24px;
+  text-align: left;
 }
 
 .offer__subtitle {
@@ -304,6 +323,34 @@ img {
 .offer__button {
   width: 100%;
   min-height: 70px;
+  margin-bottom: 32px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.offer-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 24px;
+  font-size: 15px;
+}
+
+.offer-description__item {
+  width: 40%;
+}
+
+.offer__phone {
+  text-decoration: none;
+  color: #333333;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
 @media (max-width: 1200px) {
@@ -317,6 +364,16 @@ img {
   .offer__button {
     font-size: 13px;
   }
+  .offer-description {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .offer-description__item {
+    width: 100%;
+    margin-bottom: 18px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -327,5 +384,343 @@ img {
     width: 100%;
     padding-right: 0;
   }
+  .offer-description {
+    width: 230px;
+  }
+}
+
+/* Стили для блока portfolio */
+.portfolio {
+  background: #f5f5f5 url("../img/portfolio/portfolio-pattern.jpg") repeat-y center left;
+  background-size: 50%;
+}
+
+.portfolio__title {
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.portfolio__arrows {
+  max-width: 120px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 68px;
+}
+
+.slider__image {
+  margin: auto;
+}
+
+/* Стили для блока с ценами */
+.price__title {
+  margin: auto;
+  margin-bottom: 58px;
+}
+
+.price__subtitle {
+  margin-bottom: 59px;
+  text-align: center;
+}
+
+.price__card {
+  margin-bottom: 30px;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover .card__image:before {
+  opacity: 0.8;
+}
+
+.card__text {
+  padding: 40px;
+}
+
+.card__image {
+  position: relative;
+}
+
+.card__image::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffd200), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card__image-item {
+  display: block;
+}
+
+.card__title {
+  margin: 0;
+  margin-bottom: 31px;
+  font-size: 18px;
+}
+
+.card__link {
+  display: inline-block;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: #333333;
+  font-size: 16px;
+  position: relative;
+}
+
+.card__link:hover:after {
+  height: 12px;
+}
+
+.card__link:after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  z-index: -1;
+  background-color: #ffd200;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .price__card {
+    margin: 0 auto 30px;
+  }
+  .card__text {
+    padding: 30px 40px;
+  }
+  .card__title {
+    margin-bottom: 15px;
+  }
+}
+
+/* Стили для блока с брифом */
+.brif {
+  background-image: url(../img/brif/brif-color-bg.jpg), url(../img/brif/brif-bg.jpg);
+  background-position: left center, center right;
+  background-size: 50%, contain;
+  background-repeat: repeat-y, no-repeat;
+}
+
+.brif-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.brif__interview {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.brif__form {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding-left: 200px;
+  text-align: center;
+}
+
+.brif__input {
+  width: 100%;
+  max-width: 370px;
+  margin-bottom: 15px;
+}
+
+.brif__button {
+  width: 100%;
+  max-width: 370px;
+  height: 70px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.interview {
+  padding-right: 70px;
+}
+
+.interview__title {
+  margin-bottom: 50px;
+  font-size: 22px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.interview__subtitle {
+  display: block;
+  margin-bottom: 95px;
+  font-size: 16px;
+}
+
+.interview-list {
+  list-style: none;
+  padding: 0;
+}
+
+.interview-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.interview-list__counter {
+  margin-right: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 35px;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #333333;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.interview-list__text {
+  max-width: 400px;
+}
+
+.form__title {
+  margin-bottom: 50px;
+  font-size: 22px;
+  color: #333333;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.form__subtitle {
+  display: block;
+  margin-bottom: 49px;
+  font-size: 16px;
+}
+
+.form__description {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .brif__form {
+    padding-left: 30px;
+  }
+  .interview {
+    padding-right: 30px;
+  }
+  .interview__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .interview__subtitle {
+    margin-bottom: 30px;
+  }
+  .interview-list__text {
+    font-size: 14px;
+    max-width: 300px;
+  }
+  .interview-list__counter {
+    margin-right: 20px;
+  }
+  .form__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .form__subtitle {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brif {
+    background-image: url(../img/brif/brif-color-bg.jpg), url(../img/brif/brif-bg.jpg);
+    background-position: top center, center right;
+    background-size: 100% 50%, cover;
+    background-repeat: repeat-x, no-repeat;
+  }
+  .brif-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .brif__form {
+    margin-top: 80px;
+  }
+  .interview-list__text {
+    max-width: 175px;
+  }
+}
+
+/* Стили модального окна */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-dialog {
+  position: relative;
+  margin: auto;
+  max-width: 450px;
+  width: 90%;
+  min-width: 200px;
+  background-color: #fff;
+  padding: 40px;
+}
+
+.modal-dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 /*# sourceMappingURL=style.css.map */
